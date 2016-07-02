@@ -1,0 +1,14 @@
+{
+  "name": "kv-store",
+  "version": "0.1.0",
+  "description": "Transactional key value store",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Kyle Suss <susskyle@gmail.com> (http://kylesuss.com/)",
+  "license": "MIT",
+  "engines": {
+    "node": "6.2.2"
+  }
+}
