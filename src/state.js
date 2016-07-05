@@ -37,7 +37,7 @@ const newContext = function () {
   transactionContext = newContext
 }
 
-const commit = function() {
+const commit = function () {
   return new Promise((resolve, reject) => {
     if (typeof transactionContext === 'undefined') {
       return reject('no transaction')
