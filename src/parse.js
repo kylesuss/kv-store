@@ -51,7 +51,15 @@ const parse = function (input) {
       )
     }
 
-    return resolve(chunks)
+    const response = { command }
+
+    commandValidations.format.split(' ').forEach((chunk, index) => {
+      // Skip the command as its already been added and formatted
+      if (index === 0) { return }
+      response[chunk.replace(/<|>/gi, '')] = chunks[index]
+    })
+
+    return resolve(response)
   })
 }
 
