@@ -24,7 +24,9 @@ const count = function (value) {
   const currentState = state()
 
   const duplicates = Object.keys(currentState)
-    .filter(stateKey => currentState[stateKey] === value)
+    .filter((stateKey) => {
+      return currentState[stateKey] === value
+    })
 
   // Stringify to mitigate any conditionals which would consider 0 to be falsy
   return `${ duplicates.length }`
